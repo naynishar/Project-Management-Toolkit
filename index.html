@@ -413,6 +413,29 @@ tr:hover { background: #f0faf9; }
 .video-placeholder p { color: rgba(255,255,255,0.6); font-size: 0.88rem; }
 .video-note { background: rgba(244,162,97,0.15); border: 1px solid rgba(244,162,97,0.3); color: var(--amber); font-size: 0.78rem; padding: 8px 16px; border-radius: 6px; margin-top: 14px; display: inline-block; }
 
+/* ===== YOUTUBE VIDEO EMBED ===== */
+.video-embed-wrap {
+  background: var(--navy); border-radius: 16px; padding: 28px 28px 24px;
+  margin: 32px 0; border: 1px solid rgba(0,168,150,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.video-embed-label {
+  display: inline-block; background: rgba(0,168,150,0.18); color: var(--teal-light);
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 4px 12px; border-radius: 20px; margin-bottom: 10px;
+  border: 1px solid rgba(0,168,150,0.3);
+}
+.video-embed-title { color: white; font-weight: 700; font-size: 1.05rem; margin-bottom: 6px; }
+.video-embed-desc { color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-bottom: 18px; }
+.video-embed-frame {
+  position: relative; width: 100%; padding-bottom: 56.25%; /* 16:9 */
+  border-radius: 10px; overflow: hidden; background: #000;
+}
+.video-embed-frame iframe {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  border: none; border-radius: 10px;
+}
+
 /* ===== QUOTE BLOCK ===== */
 .quote-block {
   background: linear-gradient(135deg, var(--navy), var(--navy-light));
@@ -760,11 +783,19 @@ footer {
       <div class="card fade-up"><div class="card-icon">🎯</div><h3>SMART Objectives</h3><p>All project goals must be Specific, Measurable, Achievable, Relevant and Time-bound. Vague goals lead to disagreement, delays and unmet expectations (Larson & Gray, 2021).</p><p class="cite">Larson & Gray (2021), p. 82</p></div>
       <div class="card fade-up"><div class="card-icon">📐</div><h3>Scope Definition</h3><p>Clearly documents what the project WILL and WON'T deliver. Without this, scope creep — gradual expansion of requirements — will drain resources and delay completion.</p><p class="cite">Kerzner (2022), p. 144</p></div>
     </div>
-    <div class="video-placeholder fade-up">
-      <div class="play-btn">▶</div>
-      <h4>Video: How to Write a Project Charter in 10 Minutes</h4>
-      <p>A short walkthrough showing a real project charter template filled in for an Irish community charity.</p>
-      <span class="video-note">📹 Replace this placeholder with your own recorded walkthrough video</span>
+    <div class="video-embed-wrap fade-up">
+      <div class="video-embed-label">🎬 Video Walkthrough</div>
+      <h4 class="video-embed-title">How to Write a Project Charter in 10 Minutes</h4>
+      <p class="video-embed-desc">A short walkthrough showing a real project charter template filled in for an Irish community charity.</p>
+      <div class="video-embed-frame">
+        <iframe
+          src="https://www.youtube.com/embed/rbVTTZPbGfw"
+          title="How to Write a Project Charter in 10 Minutes"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
     <div style="margin-top:32px;">
       <a class="download-btn" href="#" onclick="alert('Template: Download the Project Charter PDF from your Wix media manager')">📥 Download Project Charter Template</a>
